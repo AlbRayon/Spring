@@ -31,4 +31,5 @@ public class Usuarios {
 	@Column(name= "Email", nullable = false)
 	private String email;
 
+	
 }
