@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuarios</title>
+    <!-- Aquí puedes agregar enlaces a CSS y otros recursos si necesitas -->
+</head>
+<body>
+
+<h1>Usuarios</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <!-- Agrega más cabeceras de columna según las propiedades de tu clase Usuario -->
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Usamos th:each para iterar sobre la colección de usuarios -->
+        <tr th:each="usuario : ${usuarios}">
+            <td th:text="${usuario.id}">1</td>
+            <td th:text="${usuario.nombre}">Nombre de Usuario</td>
+            <td th:text="${usuario.email}">email@example.com</td>
+            <!-- Añade más celdas de datos correspondientes a las propiedades de Usuario -->
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
